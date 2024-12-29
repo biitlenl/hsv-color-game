@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ7L4JY49F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CJ7L4JY49F');
+    </script>
+
+    <meta name="keywords" content="odd one out color game">
+    <meta name="description" content="what's the odd one out?">
+    <meta name="author" content="clue">
+    <meta name="application-name" content="odd one out">
+
+    <meta property="og:description" content="what's the odd one out?">
+    <meta property="og:title" content="odd one out" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hsv.beta.biitle.nl/" />
+    <meta property="og:image" content="https://hsv.beta.biitle.nl/favicon.png" />
+
+    <meta name="twitter:title" content="odd one out">
+    <meta name="twitter:description" content="what's the odd one out?">
+    <meta name="twitter:image" content="https://hsv.beta.biitle.nl/favicon.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tail.css">
+    <script src="game.js" defer></script>
+    <title>odd one out</title>
+</head>
+<body class="flex justify-center items-center w-screen h-screen">
+    <div id="game" class="h-screen w-1/3 max-[1000px]:w-full max-[1000px]:pl-1 max[100px]:pr-1 flex-col justify-center items-center flex">
+        <h1 class="text-5xl text-center font-normal">
+            which one is the
+            <br>
+            <span class="text-3xl">odd one out</span>
+        </h1>
+        <div class="bg-neutral-100 rounded-xl w-4/6 mt-12 aspect-square p-2 grid grid-cols-3 grid-rows-3">
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="true" class="m-2 rounded-xl bg-red-600 aspect-square cursor-pointer"></div>
+            <div id="card" data-odd="false" class="m-2 rounded-xl bg-red-500 aspect-square cursor-pointer"></div>
+        </div>
+        <span class="text-lg pt-2 text-neutral-400 font-normal" id="score">score: 0</span>
+    </div>
+    <div id="over" class="overflow-scroll h-screen w-1/3 max-[600px]:w-full max-[600px]:pl-1 max[100px]:pr-1 flex-col justify-center items-center hidden">
+        <h1 class="text-5xl font-normal text-center">
+            <span id="color-name">literally red</span>
+            <br>
+            <span class="text-red-500">got you</span>
+        </h1>
+        <br>
+        <div id="color-block" class="w-1/2 bg-red-500 aspect-square mt-12 rounded-xl"></div>
+        <span class="text-lg pt-2 text-neutral-400 font-normal" id="gameover-score">score: 0</span>
+        <div class="w-full text-center h-4 overflow-scroll max-h-4">
+            <span class="text-xs pt-2 text-black font-normal text-center max-w-4 overflow-hidden text-clip" id="gameover-history">what</span>
+        </div>
+        <button class="bg-green-300 py-3 px-5 rounded-xl mt-2" onclick="share()">
+            Share
+        </button>
+
+        <button onclick="window.location.reload();" class="bg-white outline outline-2 outline-neutral-300 py-4 px-14 rounded-xl mt-2 text-2xl">
+            play again
+        </button>
+    </div>
+</body>
+</html>
