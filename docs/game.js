@@ -26,6 +26,8 @@ const colors = [
     {"hex": "#8b5cf6", "name": "not violet"}
 ];
 
+document.title = 'odd one out'
+
 const cards = document.querySelectorAll("#card");
 const text = document.getElementById("score");
 
